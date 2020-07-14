@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("/background.jpg");
+        }
+    </style>
+    <title>Single Movie</title>
+
+</head>
+<body>
+<h1>Single Movie Page</h1>
+<div style="text-align:right; width:100%; padding:10px;">
+    <button type="button" onclick="window.location='shopping-cart.html';">Check Out</button>
+</div>
+
+<!-- H3 body is left empty here, will be populated with the data retrieved with single-star.js -->
+<!-- single-star.js will find this html element by it's id "star_info" -->
+
+<table id=single_movie_table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Director</th>
+        <th>Stars</th>
+        <th>Genres</th>
+        <th>Ratings</th>
+        <th> </th>
+    </tr>
+    </thead>
+
+    <!-- Table body is left empty here, will be populated with the data retrieved with single-star.js -->
+    <!-- single-star.js will find this html element by it's id "movie_table_body" -->
+    <tbody id=single_movie_table_body></tbody>
+</table>
+
+<!--<button onclick="window.location.href = sessionStorage.getItem('returnPage');">Return to Movies</button>-->
+<button id="return">Return to Movies</button>
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Load our own JS file -->
+<!-- The path is relative to single-star.html, since these two files are in the same directory -->
+<!-- Note the url does not contain a "/" in the beginning, which means the url is relative to current path
+     otherwise the url is relative to the root path-->
+<script src="single-movie.js"></script>
+</body>
+
+
+</html>

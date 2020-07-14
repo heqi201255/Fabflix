@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B9F8F8"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title3"
+        android:layout_width="139dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="76dp"
+        android:text="Fabflix"
+        android:textColor="@color/red"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/searchBox"
+        android:layout_width="309dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="213dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:maxLines="1"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="192dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="341dp"
+        android:text="search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

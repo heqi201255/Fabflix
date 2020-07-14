@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            /*background-image: url("/background.jpg");*/
+        }
+    </style>
+    <title>Dashboard</title>
+</head>
+
+<body>
+<h1>Dashboard</h1>
+
+
+<form id="addstar">
+    <p>Insert a Star</p>
+    <input type="text" id="sname" placeholder="name" >
+    <input type="number" id = "syear" placeholder="birth year">
+    <input type="button" value="Submit" onclick="InsertStar()">
+</form>
+
+<form id="addmovie">
+    <p>Insert a Movie</p>
+    <input type="text" id="mtitle" placeholder="Title" >
+    <input type="number" id = "myear" placeholder="Year">
+    <input type="text" id="mdirector" placeholder="Director" >
+    <input type="text" id="mgenre" placeholder="Genre" >
+    <input type="text" id="mstar" placeholder="Star" >
+    <input type="button" value="Submit" onclick="InsertMovie()">
+</form>
+
+<table id=metadata_table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Table Name</th>
+        <th>Attribute Name</th>
+        <th>Attribute Type</th>
+        <th>Attribute Size</th>
+    </tr>
+    </thead>
+
+    <!-- Table body is left empty here, will be populated with the data retrieved with single-star.js -->
+    <!-- single-star.js will find this html element by it's id "movie_table_body" -->
+    <tbody id=metadata_table_body></tbody>
+</table>
+
+<button><a href = "main.html">Return to main page</a></button>
+<!--<button onclick="window.location.href = sessionStorage.getItem('returnPage');">Return to Movies</button>-->
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="_dashboard.js"></script>
+</body>
+
+
+</html>

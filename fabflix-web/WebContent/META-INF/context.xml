@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+
+    <!-- Defines a Data Source Connecting to localhost moviedb-->
+
+    <!--No connection pooling-->
+<!--    <Resource name="jdbc/moviedb"-->
+<!--              auth="Container"-->
+<!--              driverClassName="com.mysql.jdbc.Driver"-->
+<!--              type="javax.sql.DataSource"-->
+<!--              username="mytestuser"-->
+<!--              password="mypassword"-->
+<!--              url="jdbc:mysql://localhost:3306/moviedb"/>-->
+    <!--With connection pooling-->
+    <Resource name="jdbc/moviedb"
+              auth="Container"
+              driverClassName="com.mysql.jdbc.Driver"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              type="javax.sql.DataSource"
+              maxTotal="100" maxIdle="30" maxWaitMillis="10000"
+              username="mytestuser"
+              password="mypassword"
+              url="jdbc:mysql://localhost:3306/moviedb?autoReconnect=true&amp;useSSL=false"/>
+
+    <Resource name="jdbc/masterdb"
+              auth="Container"
+              driverClassName="com.mysql.jdbc.Driver"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              type="javax.sql.DataSource"
+              maxTotal="100" maxIdle="30" maxWaitMillis="10000"
+              username="mytestuser"
+              password="mypassword"
+              url="jdbc:mysql://172.31.0.35:3306/moviedb?autoReconnect=true&amp;useSSL=false"/>
+
+    <Resource name="jdbc/slavedb"
+              auth="Container"
+              driverClassName="com.mysql.jdbc.Driver"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              type="javax.sql.DataSource"
+              maxTotal="100" maxIdle="30" maxWaitMillis="10000"
+              username="mytestuser"
+              password="mypassword"
+              url="jdbc:mysql://172.31.2.100:3306/moviedb?autoReconnect=true&amp;useSSL=false"/>
+</Context>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {text-align: center;}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="movies.js"></script>
+    <title>Movie List</title>
+</head>
+<body>
+
+
+<h1>Movies</h1>
+<div style="text-align:right; width:100%; padding:10px;">
+    <button type="button" onclick="window.location='shopping-cart.html';">Check Out</button>
+</div>
+
+<form>
+    <select id = "sortbox" onchange="getSort()">
+        <option>Sort</option>
+        <option value = "r_dsc_t_asc">Sort By Rating in descending order, Title in ascending order</option>
+        <option value = "r_dsc_t_dsc">Sort By Rating in descending order, Title in descending order</option>
+        <option value = "r_asc_t_asc">Sort By Rating in ascending order, Title in ascending order</option>
+        <option value = "r_asc_t_dsc">Sort By Rating in ascending order, Title in descending order</option>
+
+        <option value = "t_dsc_r_asc">Sort By Title in descending order, Rating in ascending order</option>
+        <option value = "t_dsc_t_dsc">Sort By Title in descending order, Rating in descending order</option>
+        <option value = "t_asc_r_asc">Sort By Title in ascending order, Rating in descending order</option>
+        <option value = "t_asc_r_dsc">Sort By Title in ascending order, Rating in descending order</option>
+    </select>
+</form>
+
+<form>
+    <select id = "pagenumbox" onchange = "getPage()">
+        <option>Number of movies per page</option>
+        <option value = "10">10</option>
+        <option value = "25">25</option>
+        <option value = "50">50</option>
+        <option value = "100">100</option>
+    </select>
+</form>
+
+<button id = 'prev' onClick = "goPrev()">Go to previous page</button>
+<button id = 'next' onClick = "goNext()">Go to next page</button>
+
+<!-- Id "star_table" is useful for jQuery to find the html element with id, class here is mapping to Bootstrap defined class CSS -->
+<table id=movie_table class="table table-striped">
+    <!-- Create a table header -->
+    <thead>
+    <tr>
+        <!-- Titles of each column-->
+        <th>Title</th>
+        <th>Year</th>
+        <th>Director</th>
+        <th>Genre</th>
+        <th>Actors</th>
+        <th>Rating</th>
+        <th> </th>
+
+    </tr>
+    </thead>
+    <!-- Table body is left empty here, will be populated with the data retrieved with movies.js -->
+    <!-- Again, id "star_table_body" is useful for jQuery to find this html element -->
+    <tbody id=movie_table_body></tbody>
+</table>
+<button><a href = "main.html">Return to main page</a></button>
+<!-- Load jQuery and Bootstrap JS -->
+
+</body>
+
+
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel = "stylesheet" href="generalStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="payment.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            /*background: url("background.jpg") repeat center 0;*/
+            /*background-size: cover;*/
+        }
+    </style>
+    <title>payment page</title>
+</head>
+
+
+<body>
+<h1>Payment</h1>
+<div><button type="button" onclick="window.location='main.html';">Return to MainPage</button></div>
+
+<div id="total"></div>
+<p></p>
+<h2 id="confirm"></h2>
+<h2 id="message"></h2>
+<p></p>
+<div id="payBody" style="position:fixed;">
+    <div class="container tab-pane fade show" id="payment" role="tabpanel" aria-labelledby="pills-multiSearch-tab" style="text-align:center">
+        <p></p>
+        <form id="paymentForm" method="post">
+
+            <label for="fname"></label><input type="text" placeholder="First Name" id = "fname" name="first">
+            <label for="lname"></label><input type="text" placeholder="Last Name" id = "lname" name="last"><br />
+            <br />
+            <label for="cnumber"></label><input type="text" placeholder="Card Number" id = "cnumber" name="card">
+            <label for="edate"></label><input type="text" placeholder="Expiration Date" id = "edate" name="exp">
+            <br />
+            <br />
+            <input type="button" value = "Submit" onclick="submitPaymentForm()">
+        </form>
+    </div>
+</div>
+
+
+
+</body>
+</html>
